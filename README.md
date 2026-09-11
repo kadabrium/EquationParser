@@ -44,3 +44,6 @@ The GUI's optional **Render** action sends the generated LaTeX to the public Cod
 The EquationParser source code is released under the [MIT License](LICENSE). It dynamically links to Qt, which is provided in Windows release archives under the GNU LGPL v3; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [LICENSES/LGPL-3.0.txt](LICENSES/LGPL-3.0.txt).
 
 PEGTL is retrieved by CMake when building from source and is licensed under the MIT License.
+
+## AI Usage Disclosure
+This project uses AI for documentation, including internal design docs and part of commenting. Implementation code is not AI generated.
