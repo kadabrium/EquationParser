@@ -14,13 +14,14 @@ Complete
 - Superscripts and subscripts in most contexts
 - Greek symbols
 - Verbatim functions (those that stay in f() form in output)
+
 In development
 - Arrays and matrices
 
 
 ## Requirements
 
-- A C++20 compiler
+- C++20 compiler
 - CMake 3.24 or later
 - Qt 6.5 or later with the `Widgets`, `Network`, and `Svg` components
 - Network access at configure time so CMake can download PEGTL
@@ -47,9 +48,9 @@ Start `EqPGUI` and enter an expression, such as `sqrt(3, x)` or `sum(i, 1, n, x^
 
 ## Releases
 
-Windows release archives contain `EqPGUI.exe`, the dynamically linked Qt runtime, and the notices required for that runtime. Extract the complete archive before running the application. The Qt DLLs may be replaced with compatible builds as permitted by the LGPL.
+Windows release archive contains `EqPGUI.exe`, dynamically linked Qt runtime DLLs, and the notices required for that runtime. Extract the complete archive before running the application. The Qt DLLs may be replaced with compatible builds as permitted by the LGPL.
 
-The GUI's optional **Render** action sends the generated LaTeX to the public CodeCogs endpoint. It therefore requires network access and is subject to that service's terms and availability.
+The GUI's optional **Render** action sends the generated LaTeX to the public CodeCogs endpoint and is subject to that service's terms and availability.
 
 ## License
 
