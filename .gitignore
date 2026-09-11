@@ -1,0 +1,29 @@
+# CMake build trees
+/build/
+/build-*/
+/cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+
+# IDE files
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Native build products
+*.exe
+*.dll
+*.lib
+*.exp
+*.ilk
+*.pdb
+*.obj
+*.o
+*.a
+
+# Generated sample output
+batchTest.txt_converted.txt

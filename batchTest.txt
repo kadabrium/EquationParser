@@ -1,0 +1,27 @@
+x
+42
+1.5e-3
+a+b_ij
+1+2*3
+a-b/c^d
+-x
+--x
+n!
+-n!
+(a+b)*c
+a*b_ij
+5*beta_alpha
+f(x)
+g()
+int(1, 2, x+y, x)
+int(x+y, x)
+sqrt(3, x)
+f(softmax(alpha), -1)
+f(sigmoid^-1(alpha), -1)
+sin(x)^2
+acos(20*pi/y)+sin(pi)
+a+
+sqrtx)
+sin(a,)
+cos(a,b)
+-a**b/(c+d)^2
