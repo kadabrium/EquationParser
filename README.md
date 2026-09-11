@@ -6,6 +6,18 @@ EquationParser converts a compact, plain-text mathematical expression language i
 - `EqPCLI`: an interactive command-line interface.
 - `EqPTest`: parser, AST, and end-to-end rendering tests.
 
+## Functionalities
+
+Complete
+- Arithmetic operators
+- Common functions in plain function call syntax, eg. sqrt(), binom()
+- Superscripts and subscripts in most contexts
+- Greek symbols
+- Verbatim functions (those that stay in f() form in output)
+In development
+- Arrays and matrices
+
+
 ## Requirements
 
 - A C++20 compiler
