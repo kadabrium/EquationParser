@@ -10,7 +10,9 @@ The release keeps the Qt runtime as separate dynamic libraries. You may replace 
 
 ## PEGTL
 
-This project obtains PEGTL 3.2.8 at build time from https://github.com/taocpp/PEGTL. PEGTL is licensed under the MIT License.
+This project obtains PEGTL 4.0.0 at build time from https://github.com/taocpp/PEGTL, pinned to commit 8b9ddae995d035859ae5b8eada4f17b5f5203c3b. PEGTL is used under the Boost Software License 1.0. A copy of that license is provided in [LICENSES/BSL-1.0.txt](LICENSES/BSL-1.0.txt).
+
+PEGTL is header-only and is statically linked into the executables; it contributes no separate files to the release archive.
 
 ## Microsoft graphics components
 

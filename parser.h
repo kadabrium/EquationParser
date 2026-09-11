@@ -1,6 +1,6 @@
 // EquationParser PEGTL front end produces a PEGTL parse tree, 
 // and it does not yet run the precedence-climbing fold. 
-// `expr` / `prefixed` / `postfixed` nodes therefore arrive flat
+// expr/prefixed/postfixed nodes therefore arrive flat
 #pragma once
 #include <memory>
 #include <ostream>
