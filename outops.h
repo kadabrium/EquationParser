@@ -34,6 +34,7 @@ struct OutFunc {
 
 inline OutFunc newVerbatim(std::string_view name, int arity, bool inv) {
   std::vector<int> argPrecs(arity, ast::kMinPrec); 
+  // single letter name default italic
   std::string pref = name.length() == 1?
     "\\mathit{" + std::string(name) : "\\mathrm{" + std::string(name);
   if (inv) pref += "^{-1}";

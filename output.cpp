@@ -8,7 +8,14 @@ namespace EqP {
 
 namespace out {
 
-
+std::string_view Renderer::mulType(MulStyle s) {
+  switch (s) {
+    case MulStyle::Implicit: return "ImplMul";
+    case MulStyle::Cdot: return "DotMul";
+    case MulStyle::Times: return "CrossMul";
+  }
+  return "ImplMul";
+}
 
 void Renderer::updateOptions() {
   this->ops[static_cast<std::size_t>(ast::ASTOp::Mul)] = mulType(opt.mult[0]);
@@ -192,7 +199,9 @@ OutFragment Renderer::renderNode(const ast::ASTNode& node) const {
             "inverse superscript not available for special notation functions (use asin, etc. for trig)", node.span);
         }
         catch (std::out_of_range&) {
-          callee = newVerbatim(call.callee, (int)(call.args.size()), call.inv);
+          std::string verbatimCallee = (this->opt.greek && greekSymbolSet.contains(call.callee))?
+            "\\" + call.callee + " "  : call.callee;
+          callee = newVerbatim(verbatimCallee, (int)(call.args.size()), call.inv);
         }
         std::vector<const ast::ASTNode*> argNodes;
         for (const auto& a : call.args) { 

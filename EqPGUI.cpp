@@ -31,7 +31,7 @@
 using namespace EqP;
 
 
-EqPGUI::EqPGUI(out::Renderer& r, QWidget* parent):
+EqPGUI::EqPGUI(out::Renderer r, QWidget* parent):
   QMainWindow(parent),
   renderer{r} {
   loadSettings();
@@ -324,12 +324,12 @@ void EqPGUI::copyImg() {
 
 
 int main(int argc, char* argv[]) {
-  out::Renderer r{Options{}};
   QApplication app(argc, argv);
   app.setOrganizationName("EquationParser");
   app.setApplicationName("EquationParser GUI");
 
-  EqPGUI gui(r);
+  //out::Renderer r{Options{}};
+  EqPGUI gui(out::Renderer{Options{}});
   gui.show();
   return app.exec();
 }

@@ -23,10 +23,10 @@ class EqPGUI: public QMainWindow {
 Q_OBJECT
 
 public:
-  explicit EqPGUI(EqP::out::Renderer& renderer, QWidget* parent = nullptr);
+  explicit EqPGUI(EqP::out::Renderer renderer, QWidget* parent = nullptr);
 
 private:
-  EqP::out::Renderer& renderer;
+  EqP::out::Renderer renderer;
   // global access widgets
   QPlainTextEdit* inputBox = nullptr;
   QLineEdit* outputBox = nullptr;

@@ -25,6 +25,7 @@ struct OutFragment {
 };
 
 class Renderer {
+private:
   std::array<std::string_view, 10> ops = {
   "Add", "Sub",                      
   // pick two for Mul in Options
@@ -34,14 +35,8 @@ class Renderer {
   "Pow", "Neg", "Pos", "Fact",
   "Eq"         
   };
-  std::string_view mulType(MulStyle s) {
-    switch (s) {
-      case MulStyle::Implicit: return "ImplMul";
-      case MulStyle::Cdot: return "DotMul";
-      case MulStyle::Times: return "CrossMul";
-    }
-    return "ImplMul";
-  }
+
+  std::string_view mulType(MulStyle s);
   void updateOptions();
   OutFragment renderNode(const ast::ASTNode& node) const;
   OutFragment renderOp(const OutFunc& f, std::span<const ast::ASTNode*> args) const;
